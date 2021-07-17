@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@Component("general")
+@Component
 @Scope("prototype")
 @Slf4j
 public class GeneralPurposeInterceptor extends AbstractComAttributes implements HandlerInterceptor {
