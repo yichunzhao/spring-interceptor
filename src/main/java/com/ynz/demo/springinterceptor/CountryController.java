@@ -17,4 +17,11 @@ public class CountryController {
         return List.of("CHINA", "UK", "USA", "FRANCE", "RUSSIA", "GERMANY");
     }
 
+    @GetMapping("jet-fighters")
+    public List<String> getJetFighters() {
+        log.info("in getJetFighters handler...");
+
+        return List.of("J20A, F15E, F35B, Mirage2000");
+    }
+
 }

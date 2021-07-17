@@ -8,11 +8,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 @RequiredArgsConstructor
 public class MyWebMvcConfig implements WebMvcConfigurer {
-    private final MyInterceptor myInterceptor;
+    private final GeneralPurposeInterceptor generalInterceptor;
+    private final SinglePurposeInterceptor singlePurposeInterceptor;
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(myInterceptor);
+        registry.addInterceptor(generalInterceptor);
+        registry.addInterceptor(singlePurposeInterceptor).addPathPatterns("/jet-fighters");
     }
 
 }
